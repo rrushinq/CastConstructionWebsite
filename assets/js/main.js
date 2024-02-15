@@ -34,21 +34,24 @@
     el.addEventListener('scroll', listener)
   }
 
-  /**
-   * Toggle .header-scrolled class to #header when page is scrolled
-   */
-  let selectHeader = select('#header')
-  if (selectHeader) {
-    const headerScrolled = () => {
-      if (window.scrollY > 100) {
-        selectHeader.classList.add('header-scrolled')
-      } else {
-        selectHeader.classList.remove('header-scrolled')
-      }
+
+let selectHeader = select('#header')
+if (selectHeader) {
+  const headerScrolled = () => {
+    const logoImg = selectHeader.querySelector('.logo img');
+    if (window.scrollY > 1) {
+      selectHeader.classList.add('header-scrolled');
+      selectHeader.classList.add('header-small'); // Add class to reduce header size
+      logoImg.style.maxHeight = '60px';           // Set the max-height of the logo image when scrolled
+    } else {
+      selectHeader.classList.remove('header-scrolled');
+      selectHeader.classList.remove('header-small'); // Remove class to restore header size
+      logoImg.style.maxHeight = '80px';              // Set the max-height of the logo image when not scrolled
     }
-    window.addEventListener('load', headerScrolled)
-    onscroll(document, headerScrolled)
   }
+  window.addEventListener('load', headerScrolled);
+  onscroll(document, headerScrolled);
+}
 
   /**
    * Back to top button
@@ -84,18 +87,6 @@
       this.nextElementSibling.classList.toggle('dropdown-active')
     }
   }, true)
-
-  /**
-   * Hero carousel indicators
-   */
-  let heroCarouselIndicators = select("#hero-carousel-indicators")
-  let heroCarouselItems = select('#heroCarousel .carousel-item', true)
-
-  heroCarouselItems.forEach((item, index) => {
-    (index === 0) ?
-    heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
-      heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
-  });
 
   /**
    * Porfolio isotope and filter
