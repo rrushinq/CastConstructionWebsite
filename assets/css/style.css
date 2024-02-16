@@ -16,12 +16,18 @@ p {
 
 a {
   text-decoration: none;
-  color: #d9232d;
+  color: #a40009;
 }
 
 a:hover {
   color: #e24d55;
   text-decoration: none;
+}
+
+/* Set the highlight color of text */
+::selection {
+  background-color: #a40009;
+  color: white; /* Optional: Set text color for highlighted text */
 }
 
 /*--------------------------------------------------------------
@@ -34,7 +40,7 @@ a:hover {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #d9232d;
+  background: #a40009;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -66,6 +72,7 @@ a:hover {
   z-index: 997;
   padding: 20px 0;
   max-height: 80px;
+  border-bottom: 1px solid #a40009;
 }
 
 #header.header-scrolled {
@@ -74,7 +81,7 @@ a:hover {
 }
 
 #header .logo img {
-  height: 80px;
+  height: 79px;
   transition: max-height 0.5s;
 }
 
@@ -129,12 +136,12 @@ a:hover {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #d9232d;
+  color: #a40009;
 }
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #d9232d;
+  background: #a40009;
   padding: 8px 25px;
   margin-left: 30px;
   border-radius: 4px;
@@ -181,7 +188,7 @@ a:hover {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #d9232d;
+  color: #a40009;
 }
 
 .navbar .dropdown:hover>ul {
@@ -280,7 +287,7 @@ a:hover {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #d9232d;
+  color: #a40009;
 }
 
 .navbar-mobile .getstarted,
@@ -315,7 +322,7 @@ a:hover {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #d9232d;
+  color: #a40009;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -402,7 +409,7 @@ a:hover {
   line-height: 1;
   color: #fff;
   animation-delay: 0.8s;
-  background: #d9232d;
+  background: #a40009;
 }
 
 #hero .btn-get-started:hover {
@@ -450,6 +457,18 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
+.section-title h3 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+
 .section-title h2::after {
   content: "";
   width: 120px;
@@ -473,7 +492,7 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-  padding: 18px 0;
+  padding: 18px;
   background: #f8f9fa;
   min-height: 40px;
   margin-top: 80px;
@@ -562,7 +581,7 @@ section {
   top: 7px;
   position: absolute;
   font-size: 20px;
-  color: #d9232d;
+  color: #a40009;
 }
 
 .about .content p:last-child {
@@ -597,6 +616,52 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Contact Us
+--------------------------------------------------------------*/
+.contact-us h1 {
+  color:white;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-us h2 {
+  color: white;
+  font-weight: 300;
+  line-height: 32px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-us p{
+  color: white;
+}
+
+.contact-us {
+  background-color: #a40009;
+  padding: 40px 0;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: #a40009;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #a40009;
+  color: white;
+  border: 1px solid  white;
+  cursor:pointer;
+}
+
+/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
@@ -607,7 +672,7 @@ section {
 
 .services .icon-box i {
   float: left;
-  color: #d9232d;
+  color: #a40009;
   font-size: 40px;
 }
 
@@ -630,7 +695,7 @@ section {
 }
 
 .services .icon-box:hover h4 a {
-  color: #d9232d;
+  color: #a40009;
 }
 
 /*--------------------------------------------------------------
@@ -664,7 +729,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #d9232d;
+  background: #a40009;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -777,11 +842,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #d9232d;
+  border: 1px solid #a40009;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #d9232d;
+  background-color: #a40009;
 }
 
 .portfolio-details .portfolio-info {
@@ -906,47 +971,11 @@ section {
 }
 
 .team .member .social a:hover {
-  background: #d9232d;
+  background: #a40009;
 }
 
 .team .member .social a+a {
   margin-left: 8px;
-}
-
-/*--------------------------------------------------------------
-# Our Skills
---------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  padding: 10px 0;
-  margin: 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #556270;
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: #edeff1;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #6b7b8d;
 }
 
 /*--------------------------------------------------------------
@@ -972,12 +1001,12 @@ section {
 }
 
 .features .nav-link:hover {
-  color: #d9232d;
+  color: #a40009;
 }
 
 .features .nav-link.active {
-  color: #d9232d;
-  border-color: #d9232d;
+  color: #a40009;
+  border-color: #a40009;
 }
 
 .features .tab-pane.active {
@@ -1007,7 +1036,7 @@ section {
 
   .features .nav-link.active {
     color: #fff;
-    background: #d9232d;
+    background: #a40009;
   }
 }
 
@@ -1120,7 +1149,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #d9232d;
+  border-color: #a40009;
 }
 
 .contact .php-email-form input {
@@ -1132,7 +1161,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #d9232d;
+  background: #a40009;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1160,13 +1189,13 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: #4a5562;
-  padding: 0 0 30px 0;
+  padding: 0 0 15px 0;
   color: #fff;
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background: #515d6a;
+  background: #ffffff;
   padding: 60px 0 30px 0;
 }
 
@@ -1174,8 +1203,8 @@ section {
   margin-bottom: 30px;
 }
 
-#footer .footer-top .footer-info h3 {
-  font-size: 24px;
+#footer .footer-top .footer-info h4 {
+  text-transform: uppercase;
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
@@ -1187,13 +1216,14 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
-  color: #fff;
+  color: black;
 }
 
 #footer .footer-top .social-links a {
+  text-transform: uppercase;
   font-size: 18px;
   display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
+  background: #a40009;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1206,15 +1236,16 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #d9232d;
-  color: #fff;
+  background: #ffffff;
+  color: #a40009;
   text-decoration: none;
+  border-bottom: 1px solid #a40009;
 }
 
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: 600;
-  color: #fff;
+  color: black;
   position: relative;
   padding-bottom: 12px;
 }
@@ -1229,9 +1260,10 @@ section {
   margin: 0;
 }
 
+/* Footer Icons */
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
   font-size: 18px;
   line-height: 1;
 }
@@ -1246,68 +1278,19 @@ section {
   padding-top: 0;
 }
 
+/* Footer Discover text */
 #footer .footer-top .footer-links ul a {
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: white;
-}
-
-#footer .footer-top .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4px;
-}
-
-#footer .footer-top .footer-newsletter form input[type=email] {
-  border: 0;
-  padding: 4px;
-  width: calc(100% - 110px);
-}
-
-#footer .footer-top .footer-newsletter form input[type=submit] {
-  position: absolute;
-  top: 0;
-  right: -2px;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px 2px 20px;
-  background: #d9232d;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
-}
-
-#footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: #df3740;
+  color: #a40009;
 }
 
 #footer .copyright {
   text-align: center;
-  padding-top: 30px;
-}
-
-#footer .credits {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-#footer .credits a {
-  color: rgba(255, 255, 255, 0.6);
-  transition: 0.3s;
-  font-weight: 600;
-}
-
-#footer .credits a:hover {
-  color: white;
+  padding-top: 15px;
 }
