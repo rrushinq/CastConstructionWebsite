@@ -90,6 +90,39 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
+# Header2
+--------------------------------------------------------------*/
+.header2 {
+  background-color: #a40009;
+  padding: 20px 0;
+  width: auto;
+  background-image: url('your-background-photo.jpg');
+  background-size: cover;
+}
+
+.header2 h1 {
+  color:rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 60px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+
+}
+
+.header2 h2 {
+  color: white;
+  font-weight: 300;
+  line-height: 32px;
+  font-size: 20px;
+
+}
+
+.header2 p{
+  color: white;
+}
+
+/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
@@ -357,7 +390,7 @@ a:hover {
 
 /* Style for the text overlay */
 .hero-text {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -366,25 +399,27 @@ a:hover {
 }
 
 #hero .container {
-  text-align: center;
+  text-align: left;
 }
 
 #hero h2 {
   color: #fff;
-  margin-bottom: 20px;
-  font-size: 54px;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px #2b2b2be1;
+  margin-bottom: 10px;
+  font-size: 45px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px #2b2b2b7a;
+  text-transform: uppercase;
 }
 
 #hero h3 {
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
   color: #fff;
-  font-size: 30px;
-  text-shadow: 2px 2px 4px #2b2b2be1;
-  margin-bottom: 30px;
-  font-weight: 700;
+  font-size: 26px;
+  text-shadow: 2px 2px 4px #2b2b2b7a;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 #hero p {
@@ -553,21 +588,20 @@ section {
   position: relative;
 }
 
-/* Image background */
+/* Image background 
 .about::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%; /* Adjust width to specify the portion of the section */
+  width: 50%; 
   height: 100%;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)),url('/assets/img/CastBuilding.png');
   background-size: cover;
   background-position: center;
   opacity: 0.8;
   z-index: -1;
-}
-
+}*/
 .about .content {
   padding-top: 20px;
 }
@@ -604,6 +638,68 @@ section {
 }
 
 .about .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Detailed About
+--------------------------------------------------------------*/
+.detailed_about{
+  position: relative;
+}
+
+/* Image background */
+.detailed_about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)),url('/assets/img/CastBuilding.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+
+.detailed_about .content {
+  padding-top: 20px;
+}
+.detailed_about .content h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.detailed_about .content h3 {
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.detailed_about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detailed_about .content ul li {
+  padding: 10px 0 0 28px;
+  position: relative;
+}
+
+.detailed_about .content ul i {
+  left: 0;
+  top: 7px;
+  position: absolute;
+  font-size: 20px;
+  color: #a40009;
+}
+
+.detailed_about .content p:last-child {
   margin-bottom: 0;
 }
 
